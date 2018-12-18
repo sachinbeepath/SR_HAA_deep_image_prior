@@ -6,4 +6,4 @@ make_soft_link creates soft link for files so we don't have to change their name
 
 jobscript.sh creates job for making cutouts. it calls my_executable.exe which which calls make_cutouts.py
 
-
+rename_with_filters.ipynb renames cutouts based on their filter
