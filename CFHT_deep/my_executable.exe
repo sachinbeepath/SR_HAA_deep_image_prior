@@ -1,0 +1,15 @@
+#!/bin/bash
+
+START_POINT=$1
+module load python/3.6
+
+source $HOME/projects/def-sfabbro/srdeep/bin/activate
+
+COUNTER=0
+
+while [  $COUNTER -lt 6 ]; do
+    casu_process file_$(($START_POINT+$COUNTER)).fits.fz  
+    echo file_$(($START_POINT+$COUNTER)).fits.fz | python make_cutouts.py
+    let COUNTER=COUNTER+1 
+
+done

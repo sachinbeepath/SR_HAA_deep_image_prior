@@ -1,0 +1,10 @@
+#!/bin/bash
+
+COUNTER=0
+
+for i in *.fits.fz; do
+    ln -s i file_$COUNTER
+
+    let COUNTER=COUNTER+1
+    
+done
